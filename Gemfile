@@ -4,6 +4,8 @@ gem 'rails', '4.2.5.2'
 gem 'rails-api'
 gem 'pg'
 
+gem 'active_model_serializers'
+
 group :development, :test do
   gem 'byebug'
   gem 'rspec-rails', '~> 3.4'
