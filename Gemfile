@@ -10,19 +10,18 @@ group :development, :test do
   gem 'byebug'
   gem 'rspec-rails', '~> 3.4'
   gem 'factory_girl_rails', '~> 4.5'
+  gem 'faker', '~> 1.6.1'
   gem 'capybara', '~> 2.5'
 end
 
 group :development do
   gem 'web-console', '~> 2.0'
-  gem 'spring'
   gem 'zeus' # Zeus preloads Rails app
 end
 
 group :test do
   gem 'shoulda-matchers', '~> 3.0', require: false
   gem 'database_cleaner', '~> 1.5'
-  gem 'faker', '~> 1.6.1'
   gem 'simplecov', require: false
   gem 'mutant-rspec'
 end
