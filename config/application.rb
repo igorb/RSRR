@@ -26,5 +26,10 @@ module RSRR
     # https://github.com/browserify-rails/browserify-rails/issues/48
     config.browserify_rails.commandline_options = '-t babelify'
     #config.browserify_rails.commandline_options = "-t coffeeify --extension=\".js.coffee\""
+
+    config.react.server_renderer_options = {
+      files: ['react-server.js', 'react_app.js'], # files to load for prerendering
+      replay_console: true,                 # if true, console.* will be replayed client-side
+    }
   end
 end
