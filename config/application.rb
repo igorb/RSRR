@@ -23,12 +23,10 @@ module RSRR
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
 
-    # https://github.com/browserify-rails/browserify-rails/issues/48
-    config.browserify_rails.commandline_options = '-t babelify'
-    #config.browserify_rails.commandline_options = "-t coffeeify --extension=\".js.coffee\""
+    config.browserify_rails.commandline_options = "-t coffee-reactify"
 
     config.react.server_renderer_options = {
-      files: ['react-server.js', 'react_app.js'], # files to load for prerendering
+      files: ['react-server.js', 'react_app.coffee'], # files to load for prerendering
       replay_console: true,                 # if true, console.* will be replayed client-side
     }
   end
