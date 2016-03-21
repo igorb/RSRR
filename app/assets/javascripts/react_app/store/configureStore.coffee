@@ -4,7 +4,7 @@ rootReducer = require '../reducers/index.coffee'
 
 createStoreWithMiddleware = compose(
   applyMiddleware(ReduxThunk),
-  if window.devToolsExtension then window.devToolsExtension() else f => f
+  if window.devToolsExtension then window.devToolsExtension() else (f) -> f
 )(createStore)
 
 configureStore = (initialState) ->
